@@ -1,7 +1,11 @@
 body {
-	background-color: beige;
-	h3 {
-		color: red;
-		font-size: 40px;
-	}
+  background-color: beige;
+
+  h3 {
+    color: red;
+    font-size: 40px;
+    transform: rotate(7deg);
+    display: flex;
+    column-count: 3;
+  }
 }

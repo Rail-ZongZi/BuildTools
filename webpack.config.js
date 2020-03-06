@@ -14,7 +14,7 @@ const config = {
     rules: [
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
