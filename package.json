@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Rail-ZongZi/BuildTools#readme",
   "dependencies": {
+  },
+  "devDependencies": {
+    "file-loader": "^5.1.0",
+    "url-loader": "^3.0.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   }

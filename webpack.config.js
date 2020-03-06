@@ -8,6 +8,17 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[hash:8].js"
+  },
+  // loader 配置
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: {
+          loader: "url-loader"
+        }
+      }
+    ]
   }
 };
 
