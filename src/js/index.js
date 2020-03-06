@@ -1,5 +1,5 @@
 import img from '../img/logi.png'
-import '../styles/index.css'
+import '../styles/index.scss'
 
 console.log('index.js . 页面粽子');
 
