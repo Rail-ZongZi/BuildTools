@@ -22,8 +22,9 @@
 
 - 需要安装插件 `url-loader` 和 `file-loader`, 且 url-loader中包含file-loader
 
-- 配置
+- url-loader 与 file-loader 区别点在于 `limit`设置图片大小，必须通过 `file-loader`进行相应的处理
 
+- `url-loader` 使用会被编译成 `base64` 文本
 ```javascript
   module: {
     rules: [
@@ -37,4 +38,20 @@
       }
     ]
   }
+```
+
+- `file-loader` 中设置文件别名会直接编译成原始图片
+
+```javascript
+    module: {
+      rules: [
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          options: {
+            name: '[name].[text]',
+            outputPath: 'images' // 配置打包以后文件别名
+          } 
+        } 
+      ]
+    } 
 ```

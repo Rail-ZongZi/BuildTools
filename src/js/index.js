@@ -1,4 +1,4 @@
-import img from './img/logi.png'
+import img from '../img/logi.png'
 
 console.log('index.js . 页面粽子');
 
