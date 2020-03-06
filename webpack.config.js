@@ -15,10 +15,11 @@ const config = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: {
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
             name: '[name].[hash:8].[ext]',
-            outputPath: 'images'   // 配置打包以后文件别名
+            outputPath: 'images',   // 配置打包以后文件别名
+            limit: 2048
           }
         }
       }

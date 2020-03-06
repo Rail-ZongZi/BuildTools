@@ -24,7 +24,7 @@
 
 - url-loader 与 file-loader 区别点在于 `limit`设置图片大小，必须通过 `file-loader`进行相应的处理
 
-- `url-loader` 使用会被编译成 `base64` 文本
+- `url-loader` 使用会被编译成 `base64` 文本， 设置 `limit` 大小进行打包以后生产对应的文件夹
 ```javascript
   module: {
     rules: [
@@ -32,7 +32,10 @@
         test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: 'url-loader'
+            loader: 'url-loader',
+            options: {
+              limit: 2048    // 设置一定大小值编译以后可以编译成对应的文件
+            }
           } 
         ] 
       }
