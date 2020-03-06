@@ -61,4 +61,15 @@
 
 > 样式配置
 
-- 
+- 需要安装的插件为 `style-loader` 与 `css-loader` ，且文件都是从右到左进行执行
+
+```javascript
+    module: {
+      rules: [
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader']
+        }
+      ] 
+    } 
+```
