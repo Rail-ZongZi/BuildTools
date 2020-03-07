@@ -11,7 +11,8 @@ const config = {
 	},
 	// 出口
 	output: {
-		publicPath: 'http://cdn.xxx.com',
+		// publicPath: 'http://cdn.xxx.com',  配置CDN地址
+		publicPath: './',
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].[hash:8].js"
 	},
