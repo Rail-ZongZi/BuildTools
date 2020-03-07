@@ -1,4 +1,5 @@
 @import "./avatar.scss";
+@import "./iconfont.scss";
 
 body {
   background-color: $bgColod;
@@ -9,5 +10,9 @@ body {
     transform: rotate(90deg);
     display: flex;
     column-count: 3;
+  }
+
+  .iconfont {
+    font-size: 30px;
   }
 }

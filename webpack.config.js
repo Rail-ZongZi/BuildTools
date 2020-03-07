@@ -37,6 +37,12 @@ const config = {
             modules: true
           }
         }
+      },
+      {
+        test: /\.(woff|woff2|svg|ttf|eot)$/i,
+        use: {
+          loader: "file-loader"
+        }
       }
     ]
   }

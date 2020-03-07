@@ -101,4 +101,16 @@
     }
 ```
 
+> 图标字体配置
+
+- 根据 `file-loader` 进行配置
+
+```javascript
+    {
+      test: /\.(woff|woff2|svg|ttf|eot)$/i,
+      use: {
+        loader: 'file-loader'
+      }
+    }
+```
 
