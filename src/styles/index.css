@@ -1,3 +1,44 @@
 body {
 	background-color: antiquewhite;
 }
+
+.tag {
+	cursor: pointer;
+	background-color: #f0f9eb;
+	border-color: #e1f3d8;
+	color: #67c23a;
+	margin-bottom: 20px;
+	border: 1px solid #d9ecff;
+	border-radius: 4px;
+	height: 32px;
+	width: 40%;
+	padding: 8px 10px;
+	line-height: 30px;
+	font-size: 24px;
+}
+
+button {
+	cursor: pointer;
+	background: #fff;
+	border: 1px solid #dcdfe6;
+	color: #606266;
+	-webkit-appearance: none;
+	text-align: center;
+	box-sizing: border-box;
+	outline: none;
+	font-weight: 500;
+	padding: 12px 20px;
+	font-size: 14px;
+	border-radius: 4px;
+}
+
+button:hover {
+	color: #409eff;
+	border-color: #c6e2ff;
+	background-color: #ecf5ff;
+}
+
+ul > li .iconfont {
+	color: #0d80ff;
+	font-size: 30px;
+}

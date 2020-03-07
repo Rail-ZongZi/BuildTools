@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const config = {
 	mode: "development",
@@ -15,7 +16,7 @@ const config = {
 		rules: [
 			{
 				test: /\.css$/i,
-				use: ['style-loader', 'css-loader']
+				use: ['style-loader', 'css-loader', 'postcss-loader']
 			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,
@@ -38,17 +39,23 @@ const config = {
 			}
 		]
 	},
-	devtool: "cheap-source-map",
+	// 开发环境配置（SourceMap）
+	devtool: "cheap-module-eval-source-map",
 	// 插件
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
 		port: 9000
 	},
-	plugins: [new HtmlWebpackPlugin({
-		title: "Webpack App",
-		template: "./src/index.html"
-	})]
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Webpack App",
+			template: "./src/index.html"
+		}),
+		new CleanWebpackPlugin({
+			cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')]
+		})
+	]
 };
 
-module.exports  = config;
+module.exports = config;
 
