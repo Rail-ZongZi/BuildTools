@@ -18,5 +18,8 @@ Btn.innerHTML  = '新增';
 document.body.appendChild(Btn);
 
 Btn.onclick = function (ev) {
-	console.log(ev);
+	// 创建div元素节点
+	var div = document.createElement('div');
+	div.innerHTML = '<p class="tag-item">item标签</p>';
+	document.body.appendChild(div);
 };

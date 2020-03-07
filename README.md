@@ -18,3 +18,16 @@
 ```
 
 - 配置 阿里图标字体文件 [图标字体](https://www.iconfont.cn/)
+
+- 配置热加载（HMR）
+
+```
+    devServer: {
+      hot: true,
+      hotOnly: true
+    },
+    // 热加载
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
+```

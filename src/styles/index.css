@@ -30,6 +30,7 @@ button {
 	padding: 12px 20px;
 	font-size: 14px;
 	border-radius: 4px;
+	margin-bottom: 20px;
 }
 
 button:hover {
@@ -41,4 +42,23 @@ button:hover {
 ul > li .iconfont {
 	color: #0d80ff;
 	font-size: 30px;
+}
+
+div {
+	width: 100%;
+	padding: 8px 16px;
+	background-color: #fff;
+	color: #f56c6c;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-weight: bold;
+	font-family: "微软雅黑 Light", serif;
+}
+
+/**
+奇数隔行
+ */
+div:nth-of-type(odd) {
+	background-color: #f0f9eb;
+	color: #67c23a;
 }

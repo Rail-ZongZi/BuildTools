@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
@@ -44,7 +45,9 @@ const config = {
 	// 插件
 	devServer: {
 		contentBase: path.join(__dirname, 'dist'),
-		port: 9000
+		port: 9000,
+		hot: true,
+		hotOnly: true
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -53,7 +56,8 @@ const config = {
 		}),
 		new CleanWebpackPlugin({
 			cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')]
-		})
+		}),
+		new webpack.HotModuleReplacementPlugin()
 	]
 };
 
