@@ -223,4 +223,8 @@
 
 - 使用 node（express）中搭建热加载，无法显示
 
-> **2:**
+> **2:** 使用 `new webpack.HotModuleReplacementPlugin()` HMR进行配置
+
+- [HRM](https://github.com/Rail-ZongZi/BuildTools)
+
+![avatar](info/carbon1.png)
