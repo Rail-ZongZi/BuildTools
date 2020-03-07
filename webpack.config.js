@@ -5,9 +5,13 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const config = {
 	mode: "development",// 生产环境
 	// 入口
-	entry: "./src/js/index.js",
+	entry: {
+		main: "./src/js/index.js",
+		sub: "./src/js/sub.js"
+	},
 	// 出口
 	output: {
+		publicPath: 'http://cdn.xxx.com',
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].[hash:8].js"
 	},

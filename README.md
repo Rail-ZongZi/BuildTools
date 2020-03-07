@@ -139,3 +139,25 @@
       })
     ]
 ```
+
+#### 五： 多文件配置
+
+> 打包不同的多个配置文件
+
+```javascript
+    // 入口文件
+    entry: {
+      a: 'xxx',
+      b: 'xxx'
+    }
+    // 输出文件
+    output: {
+        publicPath: 'http://cdn.xxx.com',   // 配置CDN地址
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name].[hash:8].js"
+    }
+```
+
+- 打包以后的文件
+
+![avatar](./info/carbon.png)
