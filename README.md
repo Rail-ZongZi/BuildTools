@@ -199,7 +199,28 @@
 
 - 热更新插件 `webpack-dev-middleware` 中间件
 
+- 建立 `server.js` 中进行配置 [参考文件](https://webpack.js.org/guides/development/#using-webpack-dev-middleware)
+
 ```javascript
     const express = require('express');
+    const webpack = require('webpack');
+    const webpackDevMiddleware = require('webpack-dev-middleware');
+    
     const app = express();
+    const config = require('./webpack.config');
+    const compiler = webpack(config);
+    
+    app.use(webpackDevMiddleware(compiler, {
+    	publicPath: config.output.publicPath,
+    }));
+    
+    app.listen(3000, () => console.log(`成功启动服务...`))
 ```
+
+ #### 八： 热加载 `hot`
+ 
+> **1:** 使用 热加载插件 `webpack-hot-middleware` 中间件
+
+- 使用 node（express）中搭建热加载，无法显示
+
+> **2:**

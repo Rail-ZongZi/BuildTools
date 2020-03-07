@@ -1,1 +1,1 @@
-alert('sub ...');
+console.log('sub ...');
