@@ -76,7 +76,7 @@
 
 - 使用一些样式预编译样式，比如： `less` , `scss`, `stylus` 等 同时就需要配置一些单独的样式插件进行
 
-- 一个样式文件中引入另一个样式文件 比如： `a.scss` 中引入 `b.scss` 配置，通过 `import` 引入的 `scss` 文件设置需要执行下面文件
+- 一个样式文件中引入另一个样式文件 比如： `a.scss` 中引入 `b.scss` 配置，通过 `import` 引入的 `scss` 文件设置需要执行下面文件两个loader
 
 ```javascript
     use: [
@@ -90,6 +90,15 @@
       'sass-loader',
       'postcss-loader'
     ]
+```
+
+- 设置css模块化
+
+```javascript
+    options: {
+      importLoaders: 2,
+      modules: true
+    }
 ```
 
 

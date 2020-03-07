@@ -33,7 +33,8 @@ const config = {
           options: {
             name: '[name].[hash:8].[ext]',
             outputPath: 'images',   // 配置打包以后文件别名
-            limit: 2048
+            limit: 2048,
+            modules: true
           }
         }
       }
