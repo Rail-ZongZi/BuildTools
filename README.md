@@ -144,7 +144,7 @@
 
 > 打包不同的多个配置文件
 
-```javascript
+```
     // 入口文件
     entry: {
       a: 'xxx',
@@ -166,7 +166,7 @@
  
  #### 七： 配置服务器
  
-> 使用 `package.json` 中添加 `--watch`
+> **1:** 使用 `package.json` 中添加 `--watch`
 
 - 实时监控进行编译文件
 
@@ -178,11 +178,11 @@
 }
 ```
 
-> 使用 `webpack` 内置的 `devServer` 进行编译文件
+> **2:** 使用 `webpack` 内置的 `devServer` 进行编译文件
 
 - 使用 `webpack-dev-server` 插件进行安装
 
-```javascript
+```
     devServer: {
       contentBase: path.join(__dirname, 'dist'),   // 运行打包文件
       port: 9000,  // 端口
@@ -193,3 +193,10 @@
     }
 ```
 
+> **3:** 使用 `node` 搭建服务器运行项目
+
+- 使用 `Express` 框架进行搭建
+
+```javascript
+    
+```
