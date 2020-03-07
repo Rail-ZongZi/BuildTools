@@ -114,3 +114,28 @@
     }
 ```
 
+#### 四： plugins 配置
+
+> 自定生成 `html` 文件
+
+- 使用 `html-webpack-plugin` 插件进行相应的配置
+
+```javascript
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: '网页名称',
+        template: 'xxx' // 指定html模板
+      })
+    ]
+```
+
+- 使用 `clean-webpack-plugin` 插件进行清除打包文件
+
+```javascript
+    plugins: [
+      new CleanWebpackPlugin({
+        // cleanStaleWebpackAssets: true    // 清理之前的内容
+        cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')]  // 在构建之前先清理指定目录里的内容 
+      })
+    ]
+```
