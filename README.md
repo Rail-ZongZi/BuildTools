@@ -197,6 +197,9 @@
 
 - 使用 `Express` 框架进行搭建
 
+- 热更新插件 `webpack-dev-middleware` 中间件
+
 ```javascript
-    
+    const express = require('express');
+    const app = express();
 ```

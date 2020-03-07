@@ -1,8 +1,14 @@
 const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 
 const app = express();
-const port = 6000;
+const config = require('./webpack.config');
+const compiler = webpack(config);
+const port = 3000;
 
-app.get('/', (req, res) => res.send(`Hello express 你好 express 且端口为 ${port}`));
+app.use(webpackDevMiddleware(compiler, {
+	publicPath: config.output.publicPath,
+}));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
