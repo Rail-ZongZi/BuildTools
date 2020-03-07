@@ -1,0 +1,24 @@
+{
+  "name": "demo01",
+  "version": "1.0.0",
+  "description": "包含前端一些常见的构建工具与工程化与自动化",
+  "main": "index.js",
+  "scripts": {
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rail-ZongZi/BuildTools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rail-ZongZi/BuildTools/issues"
+  },
+  "homepage": "https://github.com/Rail-ZongZi/BuildTools#readme",
+  "dependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
