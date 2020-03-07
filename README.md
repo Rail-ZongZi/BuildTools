@@ -162,4 +162,34 @@
 
 ![avatar](info/carbon.png)
 
-#### 六： 
+~~#### 六： SourceMap 配置~~
+ 
+ #### 七： 配置服务器
+ 
+> 使用 `package.json` 中添加 `--watch`
+
+- 实时监控进行编译文件
+
+```json
+{
+    "scripts": {
+      "watch": "webpack --watch"
+    }
+}
+```
+
+> 使用 `webpack` 内置的 `devServer` 进行编译文件
+
+- 使用 `webpack-dev-server` 插件进行安装
+
+```javascript
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),   // 运行打包文件
+      port: 9000,  // 端口
+      // 配置代理
+      proxy: {
+        '/api': 'xxxx.com'
+      }
+    }
+```
+

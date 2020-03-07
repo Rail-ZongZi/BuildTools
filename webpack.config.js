@@ -12,7 +12,7 @@ const config = {
 	// 出口
 	output: {
 		// publicPath: 'http://cdn.xxx.com',  配置CDN地址
-		publicPath: './',
+		publicPath: '/',
 		path: path.resolve(__dirname, "dist"),
 		filename: "[name].[hash:8].js"
 	},
@@ -52,6 +52,15 @@ const config = {
 				}
 			}
 		]
+	},
+	// 服务器设置
+	devServer: {
+		contentBase: path.join(__dirname, 'dist'),
+		// host: '0.0.0.0',
+		port: 9000
+		// proxy: {
+		// 	'/api': 'xxxx.com'
+		// }
 	},
 	// 插件
 	plugins: [
