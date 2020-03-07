@@ -1,5 +1,7 @@
+@import "./avatar.scss";
+
 body {
-  background-color: beige;
+  background-color: $bgColod;
 
   h3 {
     color: red;
