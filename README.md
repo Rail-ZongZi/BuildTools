@@ -160,4 +160,4 @@
 
 - 打包以后的文件
 
-![avatar](./info/carbon.png)
+![avatar](info/carbon.png)
